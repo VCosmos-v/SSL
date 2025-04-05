@@ -1,0 +1,79 @@
+import '@fontsource/nunito-sans/200-italic.css';
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url('/fonts/NunitoSans-Regular.woff2') format('woff2'),
+        url('/fonts/NunitoSans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    font-style: italic;
+    src:
+        url('/fonts/NunitoSans-Italic.woff2') format('woff2'),
+        url('/fonts/NunitoSans-Italic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 500;
+    font-style: normal;
+    src:
+        url('/fonts/NunitoSans-Medium.woff2') format('woff2'),
+        url('/fonts/NunitoSans-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url('/fonts/NunitoSans-Light.woff2') format('woff2'),
+        url('/fonts/NunitoSans-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 300;
+    font-style: italic;
+    src:
+        url('/fonts/NunitoSans-LightItalic.woff2') format('woff2'),
+        url('/fonts/NunitoSans-LightItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NATS';
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url('/fonts/NATS-Regular.woff2') format('woff2'),
+        url('/fonts/NATS-Regular.woff') format('woff');
+}
+
+.maintext {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+}
+
+.bgtext {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.ultext {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.tbc {
+    font-family: 'NATS', sans-serif;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
