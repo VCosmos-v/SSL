@@ -20,22 +20,59 @@ def SSL():
                            astrob5="/static/main/astroobject_5.jpg",
                            astrob6="/static/main/astroobject_6.jpg",
                            bottom="static/main/nv_bottom.jpg",
-                           milky=url_for("Milkyway")
+                           milky=url_for("Milkyway"),
+                           nothing=url_for("Nothing"),
+                           earth=url_for("Earth")
                            )
 
 @app.route("/Milkyway")
 def Milkyway():
-    return render_template("about.html",
+    f = [i.rstrip() for i in open("static/Milkyway/text.csv", encoding="utf8").readlines()]
+    return render_template("Milkyway.html",
+                           cs="/static/css/style.css",
+                           title="Млечный путь",
                            nv="/static/about/nv.png",
                            bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Cтатью подготовила Лузгина Елизавета",
+                           image1="/static/Milkyway/images/1.png",
+                           image2="/static/Milkyway/images/2.png",
+                           image3="/static/Milkyway/images/3.png",
+                           image4="/static/Milkyway/images/4.png",
+                           image5="/static/Milkyway/images/5.png",
+                           image6="/static/Milkyway/images/6.png",
                            back=url_for("SSL")
                            )
 
 @app.route("/Nothing")
 def Nothing():
-    return render_template("about.html",
+    f = [i.rstrip() for i in open("static/nothing/text.csv", encoding="utf8").readlines()]
+    return render_template("nothing.html",
+                           cs="/static/css/style.css",
+                           title="Ничего нет",
                            nv="/static/about/nv.png",
                            bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Константин Циолковский\n 1932 г.",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Earth")
+def Earth():
+    f = [i.rstrip() for i in open("static/Earth/text.csv", encoding="utf8").readlines()]
+    return render_template("earth.html",
+                           cs="/static/css/style.css",
+                           title="Земля",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Cтатью подготовила Осташова Полина",
+                           image1="/static/Earth/images/1.png",
+                           image2="/static/Earth/images/2.png",
+                           image3="/static/Earth/images/3.png",
+                           image4="/static/Earth/images/4.png",
+                           image5="/static/Earth/images/5.png",
+                           image6="/static/Earth/images/6.png",
                            back=url_for("SSL")
                            )
 

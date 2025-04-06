@@ -1,0 +1,7 @@
+{% extends "about.html" %}
+{% block content %}
+    {% for i in text %}
+        <p class="abouttext" style="color:white" align="justify">{{i}}</p>
+    {% endfor %}
+    <p class="abouttext" style="color:white" align="right">Константин Циолковский 1932 г.</p>
+{% endblock %}
