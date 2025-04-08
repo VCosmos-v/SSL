@@ -1,0 +1,10 @@
+{% extends "about.html" %}
+{% block content %}
+    {% for i in text %}
+        <p class="abouttext" style="color:white; font-size:20;" align="justify">{{i}}</p>
+    {% endfor %}
+    <p class="abouttext" style="color:white" align="right">{{ creator }}</p>
+    <div class="overflow-hidden" style="position:absolute; z-index:9; top:1200px; border-radius:4px; user-select: none; pointer-events: none;"><img src="{{image1}}" style="width:450px; height:auto;"></div>
+    <div class="overflow-hidden" style="position:absolute; z-index:9; top:1200px; left:572px; border-radius:4px; user-select: none; pointer-events: none;"><img src="{{image2}}" style="width:400px; height:auto;"></div>
+    <div class="overflow-hidden" style="position:absolute; z-index:9; top:1500px; left:572px; border-radius:4px; user-select: none; pointer-events: none;"><img src="{{image3}}" style="width:450px; height:auto;"></div>
+{% endblock %}

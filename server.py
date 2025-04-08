@@ -26,11 +26,18 @@ def SSL():
                            mars=url_for("Mars"),
                            mercury=url_for("Mercury"),
                            neptun=url_for("Neptun"),
-                           # uran=url_for("Uran"),
+                           uran=url_for("Uran"),
                            jupiter=url_for("Jupiter"),
                            halley=url_for("Halley"),
                            neutron=url_for("Neutron"),
-                           blackhole=url_for("Blackhole")
+                           blackhole=url_for("Blackhole"),
+                           leonov=url_for("Leonov"),
+                           tereshkova=url_for("Tereshkova"),
+                           gagarin=url_for("Gagarin"),
+                           kopernik=url_for("Kopernik"),
+                           constellations=url_for("Constellations"),
+                           theory=url_for("Theory"),
+                           telescope=url_for("Telescope")
                            )
 
 @app.route("/Milkyway")
@@ -122,7 +129,7 @@ def Mercury():
                            bt="/static/about/bt.jpg",
                            text=f,
                            creator="Статью подготовил Пальцев Елисей",
-                           image1="/static/Mercury/images/1.jpeg",
+                           image1="/static/Mercury/images/1.jpg",
                            image2="/static/Mercury/images/2.jpg",
                            back=url_for("SSL")
                            )
@@ -215,6 +222,152 @@ def Blackhole():
                            image2="/static/Blackhole/images/2.jpg",
                            back=url_for("SSL")
                            )
+
+@app.route("/Uran")
+def Uran():
+    f = [i.rstrip() for i in open("static/Uran/text.csv", encoding="utf8").readlines()]
+    return render_template("uran.html",
+                           cs="/static/css/style.css",
+                           height=3400,
+                           width=1440,
+                           title="Уран",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовила Шилова Анна",
+                           image1="/static/Uran/images/1.jpg",
+                           image2="/static/Uran/images/2.jpg",
+                           image3="/static/Uran/images/3.jpg",
+                           image4="/static/Uran/images/4.jpg",
+                           image5="/static/Uran/images/5.jpg",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Leonov")
+def Leonov():
+    f = [i.rstrip() for i in open("static/Leonov/text.csv", encoding="utf8").readlines()]
+    return render_template("leonov.html",
+                           cs="/static/css/style.css",
+                           height=3450,
+                           width=1440,
+                           title="Леонов Алексей Архипович",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовила Филипова Елена",
+                           image1="/static/Leonov/images/1.jpg",
+                           image2="/static/Leonov/images/2.jpg",
+                           image3="/static/Leonov/images/3.jpg",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Tereshkova")
+def Tereshkova():
+    f = [i.rstrip() for i in open("static/Tereshkova/text.csv", encoding="utf8").readlines()]
+    return render_template("tereshkova.html",
+                           cs="/static/css/style.css",
+                           height=2300,
+                           width=1440,
+                           title="Терешкова Валентина Владимировна",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовила Чинных Злата",
+                           image1="/static/Tereshkova/images/1.jpg",
+                           image2="/static/Tereshkova/images/2.jpeg",
+                           image3="/static/Tereshkova/images/3.jpeg",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Gagarin")
+def Gagarin():
+    f = [i.rstrip() for i in open("static/Gagarin/text.csv", encoding="utf8").readlines()]
+    return render_template("gagarin.html",
+                           cs="/static/css/style.css",
+                           height=1600,
+                           width=1440,
+                           title="Гагарин Юрий Алексеевич",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовила Нигматуллина Алиса",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Kopernik")
+def Kopernik():
+    f = [i.rstrip() for i in open("static/Kopernik/text.csv", encoding="utf8").readlines()]
+    return render_template("kopernik.html",
+                           cs="/static/css/style.css",
+                           height=4100,
+                           width=1440,
+                           title="Николай Коперник",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовила Штоль Дарья",
+                           image1="/static/Kopernik/images/1.jpg",
+                           image2="/static/Kopernik/images/2.jpg",
+                           image3="/static/Kopernik/images/3.jpg",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Constellations")
+def Constellations():
+    f = [i.rstrip() for i in open("static/Constellations/text.csv", encoding="utf8").readlines()]
+    return render_template("constellations.html",
+                           cs="/static/css/style.css",
+                           height=2500,
+                           width=1440,
+                           title="Созвездия",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовила Позднякова Анна",
+                           image1="/static/Constellations/images/1.jpg",
+                           image2="/static/Constellations/images/2.jpg",
+                           image3="/static/Constellations/images/3.png",
+                           image4="/static/Constellations/images/4.png",
+                           image5="/static/Constellations/images/5.jpg",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Theory")
+def Theory():
+    f = [i.rstrip() for i in open("static/Theory/text.csv", encoding="utf8").readlines()]
+    return render_template("theory.html",
+                           cs="/static/css/style.css",
+                           height=7500,
+                           width=1440,
+                           title="Теория Большого взрыва",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовила Дурновцева Юлия",
+                           image1="/static/Theory/images/1.jpg",
+                           back=url_for("SSL")
+                           )
+
+@app.route("/Telescope")
+def Telescope():
+    f = [i.rstrip() for i in open("static/Telescope/text.csv", encoding="utf8").readlines()]
+    return render_template("telescope.html",
+                           cs="/static/css/style.css",
+                           height=3200,
+                           width=1440,
+                           title="История создания космического телескопа 'Хаббл'",
+                           nv="/static/about/nv.png",
+                           bt="/static/about/bt.jpg",
+                           text=f,
+                           creator="Статью подготовил Чесноков Михаил",
+                           image1="/static/Telescope/images/1.jpg",
+                           image2="/static/Telescope/images/2.jpg",
+                           image3="/static/Telescope/images/3.jpg",
+                           image4="/static/Telescope/images/4.jpg",
+                           back=url_for("SSL")
+                           )
+
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

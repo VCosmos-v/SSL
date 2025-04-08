@@ -1,0 +1,7 @@
+{% extends "about.html" %}
+{% block content %}
+    {% for i in text %}
+        <p class="abouttext" style="color:white; font-size:20;" align="justify">{{i}}</p>
+    {% endfor %}
+    <p class="abouttext" style="color:white" align="right">{{ creator }}</p>
+{% endblock %}
