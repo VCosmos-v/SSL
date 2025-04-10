@@ -93,3 +93,11 @@ import '@fontsource/nunito-sans/200-italic.css';
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
+
+.scale {
+    transition: transform 1s;
+   }
+
+.scale:hover {
+    transform: scale(1.2);
+   }
