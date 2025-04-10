@@ -54,7 +54,7 @@ def Milkyway():
                            creator="Cтатью подготовила Лузгина Елизавета",
                            image1="/static/Milkyway/images/1.png",
                            image2="/static/Milkyway/images/2.png",
-                           image3="/static/Milkyway/images/3.png",
+                           image3="/static/Milkyway/images/3.jpg",
                            image4="/static/Milkyway/images/4.png",
                            image5="/static/Milkyway/images/5.png",
                            image6="/static/Milkyway/images/6.png",
@@ -129,7 +129,7 @@ def Mercury():
                            bt="/static/about/bt.jpg",
                            text=f,
                            creator="Статью подготовил Пальцев Елисей",
-                           image1="/static/Mercury/images/1.jpg",
+                           image1="/static/Mercury/images/1.jpeg",
                            image2="/static/Mercury/images/2.jpg",
                            back=url_for("SSL")
                            )
@@ -149,9 +149,6 @@ def Neptun():
                            image1="/static/Neptun/images/1.png",
                            image2="/static/Neptun/images/2.png",
                            image3="/static/Neptun/images/3.png",
-                           image4="/static/Neptun/images/4.png",
-                           image5="/static/Neptun/images/5.png",
-                           image6="/static/Neptun/images/6.png",
                            back=url_for("SSL")
                            )
 
@@ -326,7 +323,7 @@ def Constellations():
                            creator="Статью подготовила Позднякова Анна",
                            image1="/static/Constellations/images/1.jpg",
                            image2="/static/Constellations/images/2.jpg",
-                           image3="/static/Constellations/images/3.png",
+                           image3="/static/Constellations/images/3.jpg",
                            image4="/static/Constellations/images/4.png",
                            image5="/static/Constellations/images/5.jpg",
                            back=url_for("SSL")
